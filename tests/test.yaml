@@ -1,4 +1,6 @@
-- hosts: localhost
-  remote_user: root
+---
+- name: Test NATS role
+  hosts: nats
+  become: yes
   roles:
-    - ansible-role-nats
+    - ../../ansible-role-nats

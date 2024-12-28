@@ -1,2 +1,7 @@
-[core]
-localhost ansible_connection=local ansible_host=127.0.0.1 nats_client_advertise=127.0.0.1 nats_cluster_routes_address=127.0.0.1
+[nats]
+192.168.122.66 ansible_user=mranv ansible_ssh_private_key_file=~/.ssh/id_ed25519 nats_client_advertise=192.168.122.66 nats_cluster_routes_address=192.168.122.66
+
+[nats:vars]
+ansible_become=yes
+ansible_become_method=sudo
+ansible_become_pass=toor
