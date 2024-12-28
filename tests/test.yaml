@@ -1,6 +1,8 @@
 ---
 - name: Test NATS role
-  hosts: nats
+  hosts: all  # Changed from 'core' to 'all' to match any host in inventory
   become: yes
   roles:
-    - ../../ansible-role-nats
+    - role: ../../ansible-role-nats
+      vars:
+        nats_host_group: core  # Explicitly set the host group
